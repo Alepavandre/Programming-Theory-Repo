@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour
 	public float distance = 50f;
 	public Text scoresText;
 	private int scores = 0;
-	private Camera camera;
+	private new Camera camera;
     // Start is called before the first frame update
     void Start()
     {

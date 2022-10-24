@@ -34,6 +34,5 @@ public class UIMenu : MonoBehaviour
 	public void ChangeSens()
 	{
 		DataManager.Instance.sensValue = slider.value;
-		Debug.Log(DataManager.Instance.sensValue);
 	}
 }
