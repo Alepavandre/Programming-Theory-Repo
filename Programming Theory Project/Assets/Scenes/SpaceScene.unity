@@ -1528,12 +1528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08478d91f30a6e54697eedcf9c39250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color1: {r: 1, g: 0, b: 0, a: 1}
-  color2: {r: 0, g: 0, b: 1, a: 1}
   material: {fileID: 2100000, guid: e969340f068b5534db03715c56751e48, type: 2}
-  period: 0.05
-  disp: {x: 0, y: 0.0125, z: 0.025}
-  intensity: 3
+  period: 20
+  intensity: {x: 3, y: 1.46, z: 3.04}
 --- !u!1 &913859169
 GameObject:
   m_ObjectHideFlags: 0

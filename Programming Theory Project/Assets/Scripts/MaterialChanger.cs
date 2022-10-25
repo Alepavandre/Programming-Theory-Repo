@@ -4,31 +4,21 @@ using UnityEngine;
 
 public class MaterialChanger : MonoBehaviour
 {
-	public Color color1;
-	public Color color2;
 	public Material material;
-	//public Material skyMat;
 	public float period = 1.0f;
-	public Vector3 disp;
-	public float intensity = 1.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Vector3 intensity;
+	//public float intensity = 1.0f;
 
-    // Update is called once per frame
     void Update()
     {
-		if (!DataManager.Instance.pause){
-			Color color = new Color (Mathf.Lerp(color1.r, color2.r, Mathf.Abs(Mathf.Sin(period * Time.time + disp.x))),
-			Mathf.Lerp(color1.g, color2.g, Mathf.Abs(Mathf.Sin(period * Time.time + disp.y))),
-			Mathf.Lerp(color1.b, color2.b, Mathf.Abs(Mathf.Sin(period * Time.time + disp.z))));
-			//float curIntensity = material.GetColor("_EmissionColor").grayscale;
-			//Debug.Log(curIntensity);
-			material.SetColor("_EmissionColor", color * intensity);
-			//skyMat.SetColor("_Tint", color);
-			//material.SetFloat("_EmissionIntensity", intensity);
+		if (!DataManager.Instance.pause)
+		{
+			float k = 2 * Mathf.PI / period;
+			float r = (Mathf.Sin(k * Time.time) + 1f) * intensity.x / 2f;
+			float g = (Mathf.Sin(k * Time.time + 4f * Mathf.PI / 3f) + 1f) * intensity.y / 2f;
+			float b = (Mathf.Sin(k * Time.time + 2f * Mathf.PI / 3f) + 1f) * intensity.z / 2f;
+			Color color = new Color(r, g, b);
+			material.SetColor("_EmissionColor", color);
 		}
     }
 }

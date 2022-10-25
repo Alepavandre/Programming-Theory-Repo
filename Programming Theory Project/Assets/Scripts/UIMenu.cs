@@ -16,6 +16,7 @@ public class UIMenu : MonoBehaviour
             menu.SetActive(true);
 			DataManager.Instance.pause = true;
 			Cursor.lockState = CursorLockMode.None;
+			Time.timeScale = 0f;
         }
     }
 	
@@ -29,6 +30,7 @@ public class UIMenu : MonoBehaviour
 		menu.SetActive(false);
 		DataManager.Instance.pause = false;
 		Cursor.lockState = CursorLockMode.Locked;
+		Time.timeScale = 1f;
 	}
 	
 	public void ChangeSens()
