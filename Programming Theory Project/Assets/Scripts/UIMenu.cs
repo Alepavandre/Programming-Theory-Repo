@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class UIMenu : MonoBehaviour
+public class UIMenu : UI
 {
 	public GameObject menu;
 	public Slider slider;
@@ -13,17 +14,19 @@ public class UIMenu : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menu.SetActive(true);
-			DataManager.Instance.pause = true;
-			Cursor.lockState = CursorLockMode.None;
-			Time.timeScale = 0f;
+			if (!menu.activeSelf)
+			{
+				menu.SetActive(true);
+				DataManager.Instance.pause = true;
+				Cursor.lockState = CursorLockMode.None;
+				Time.timeScale = 0f;
+			}
+            else
+            {
+				Continue();
+            }
         }
     }
-	
-	public void Quit()
-	{
-		Application.Quit();
-	}
 	
 	public void Continue()
 	{

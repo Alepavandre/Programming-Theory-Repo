@@ -6,7 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject.CompareTag("aster"))
+		if (col.GetComponent<Potato>() != null)
 		{
 			Destroy(col.gameObject);
 		}

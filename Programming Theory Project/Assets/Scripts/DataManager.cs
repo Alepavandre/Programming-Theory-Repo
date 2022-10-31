@@ -7,6 +7,8 @@ public class DataManager : MonoBehaviour
 	public static DataManager Instance { get; private set; }
 	public float sensValue = 0.5f;
 	public bool pause;
+    public float accelerate = 1.000001f;
+
     // Start is called before the first frame update
     void Awake()
     {
