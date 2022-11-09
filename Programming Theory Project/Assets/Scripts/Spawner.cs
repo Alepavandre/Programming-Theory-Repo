@@ -11,12 +11,17 @@ public struct PotatoObject
 
 public class Spawner : MonoBehaviour
 {
-	public Transform parent;
-	public Transform spawnPlace;
+	[SerializeField]
+	private Transform parent;
+	[SerializeField]
+	private Transform spawnPlace;
 	private GameObject[] potato;
-	public PotatoObject[] potatoObjects;
-	public float delay = 0.5f;
-	public float range = 2f;
+	[SerializeField]
+	private PotatoObject[] potatoObjects;
+	[SerializeField]
+	private float delay = 0.5f;
+	[SerializeField]
+	private float range = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +46,7 @@ public class Spawner : MonoBehaviour
 		StartCoroutine("Spawn");
     }
 	
-	IEnumerator Spawn()
+	private IEnumerator Spawn()
 	{
 		while (true)
 		{

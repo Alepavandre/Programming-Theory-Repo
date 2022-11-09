@@ -1131,7 +1131,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2330,6 +2330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1248781908142117569, guid: 218c30a43b34a5c409fe8b76ddc7c9ba, type: 3}
+      propertyPath: range
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1248781908142117569, guid: 218c30a43b34a5c409fe8b76ddc7c9ba, type: 3}
       propertyPath: parent
       value: 

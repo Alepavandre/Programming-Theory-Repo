@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UIMenu : UI
+public class UIMenu : UI // INHERITANCE
 {
-	public GameObject menu;
-	public Slider slider;
+	[SerializeField]
+	private GameObject menu;
+	[SerializeField]
+	private Slider slider;
 
     // Update is called once per frame
     void Update()

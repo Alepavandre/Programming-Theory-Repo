@@ -12,7 +12,7 @@ public abstract class Body : MonoBehaviour
         hp = hpMax;
     }
 
-    public virtual void HPChanger(int count)
+    public virtual void HPChanger(int count) // ABSTRACTION
     {
         hp -= count;
         //Debug.Log(hp);

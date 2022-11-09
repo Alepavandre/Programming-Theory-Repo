@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Rotater : MonoBehaviour
 {
-	public Vector3 speed;
+	[SerializeField]
+	private Vector3 speed;
 
 	// Update is called once per frame
 	void FixedUpdate()

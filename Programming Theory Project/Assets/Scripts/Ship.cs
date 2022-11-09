@@ -5,11 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class Ship : Body
+public class Ship : Body // INHERITANCE
 {
-    public Text hpText;
-    public float distance = 50f;
-    public Text scoresText;
+    [SerializeField]
+    private Text hpText;
+    [SerializeField]
+    private float distance = 50f;
+    [SerializeField]
+    private Text scoresText;
     private int scores = 0;
     private new Camera camera;
 
@@ -27,7 +30,7 @@ public class Ship : Body
         }
     }
 
-    private void Shot()
+    private void Shot() // ABSTRACTION
     {
         var ray = camera.ScreenPointToRay(Input.mousePosition);
 
@@ -42,13 +45,13 @@ public class Ship : Body
         }
     }
 
-    public override void HPChanger(int count)
+    public override void HPChanger(int count) // POLYMORPHISM
     {
         base.HPChanger(count);
         hpText.text = hp.ToString() + " hp";
     }
 
-    public override void Destroy()
+    public override void Destroy() // POLYMORPHISM, ABSTRACTION
     {
         //Debug.Log("Ship Destroy");
         Time.timeScale = 1f;

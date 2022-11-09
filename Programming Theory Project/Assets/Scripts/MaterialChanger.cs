@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MaterialChanger : MonoBehaviour
 {
-	public Material material;
-	public float period = 1.0f;
-	public Vector3 intensity;
-	//public float intensity = 1.0f;
+	[SerializeField]
+	private Material material;
+	[SerializeField]
+	private float period = 1.0f;
+	[SerializeField]
+	private Vector3 intensity;
 
     void Update()
     {
